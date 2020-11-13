@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>web page</title>
+    <link rel="stylesheet" href="styledrugs.css" />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <img src="images/rogersdrugs.png" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <a href="Home.html"><li>Home</li></a>
+            <a href="Drugs.html"><li>Drugs</li></a>
+            <a href="Weapons.html"><li>Weapons</li></a>
+            <a href="Cart.html"><li>Cart</li></a>
+          </ul>
+        </div>
+      </nav>
+      <div class="information">
+        <div class="overlay"></div>
+        <img src="images/weed.png" class="mobile" />
+        <div id="circle">
+          <div class="feature one">
+            <img src="images/weedleaf.png" />
+            <div>
+              <h1>Marijuana</h1>
+              <p>Marijuana ('weed', 'ganja' or 'pot')</p>
+            </div>
+          </div>
+          <div class="feature two">
+            <img src="images/piils.png" />
+            <div>
+              <h1>Pills</h1>
+              <p>3,4-Methyl​enedioxy​methamphetamine</p>
+            </div>
+          </div>
+          <div class="feature three">
+            <img src="images/heroin.png" />
+            <div>
+              <h1>Heroin</h1>
+              <p>Heroin ('black tar', 'smack', 'skunk' )</p>
+            </div>
+          </div>
+          <div class="feature four">
+            <img src="images/lines.png" />
+            <div>
+              <h1>Cocaine</h1>
+              <p>Cocaine ('blow', 'crack', 'coke')</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <img src="images/arrow.png" id="upBtn" />
+      <h3>The Goods</h3>
+      <img src="images/arrow.png" id="downBtn" />
+    </div>
+    <script>
+      var circle = document.getElementById("circle");
+      var upBtn = document.getElementById("upBtn");
+      var downBtn = document.getElementById("downBtn");
+
+      var rotateValue = circle.style.transform;
+      var rotateSum;
+
+      upBtn.onclick = function() {
+        rotateSum = rotateValue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+      downBtn.onclick = function() {
+        rotateSum = rotateValue + "rotate(90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>web page</title>
+    <link rel="stylesheet" href="styleweap.css" />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <img src="images/deadpoolheading.png" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <a href="Home.html"><li>Home</li></a>
+            <a href="Drugs.html"><li>Drugs</li></a>
+            <a href="Weapons.html"><li>Weapons</li></a>
+            <a href="Cart.html"><li>Cart</li></a>
+          </ul>
+        </div>
+      </nav>
+      <div class="information">
+        <div class="overlay"></div>
+        <img src="images/deadpool.png" class="mobile" />
+        <div id="circle">
+          <div class="feature one">
+            <img src="images/katana.png" />
+            <div>
+              <h1>katana</h1>
+              <p>
+                katana is a Japanese sword characterized by a curved,
+                single-edged blade
+              </p>
+            </div>
+          </div>
+          <div class="feature two">
+            <img src="images/guns.png" />
+            <div>
+              <h1>Guns</h1>
+              <p>
+                assault rifle is a rifle that uses an intermediate cartridge
+              </p>
+            </div>
+          </div>
+          <div class="feature three">
+            <img src="images/grenade.png" />
+            <div>
+              <h1>Grenade</h1>
+              <p>
+                A grenade is an explosive weapon typically thrown by hand
+              </p>
+            </div>
+          </div>
+          <div class="feature four">
+            <img src="images/knucle.png" />
+            <div>
+              <h1>Knuckle Duster</h1>
+              <p>
+                Brass knuckles are "fist-load weapons" used in hand-to-hand
+                combat
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <img src="images/arrow.png" id="upBtn" />
+      <h3>Weapon Of Choice</h3>
+      <img src="images/arrow.png" id="downBtn" />
+    </div>
+    <script>
+      var circle = document.getElementById("circle");
+      var upBtn = document.getElementById("upBtn");
+      var downBtn = document.getElementById("downBtn");
+
+      var rotateValue = circle.style.transform;
+      var rotateSum;
+
+      upBtn.onclick = function() {
+        rotateSum = rotateValue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+      downBtn.onclick = function() {
+        rotateSum = rotateValue + "rotate(90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+    </script>
+  </body>
+</html>
